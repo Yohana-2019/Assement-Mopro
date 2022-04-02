@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_awal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Sederhana"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/edsatu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_awal"
+        android:hint="Masukkan Angka"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/eddua"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edsatu"
+        android:layout_marginTop="-156dp"
+        android:hint="Masukkan Angka"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:id="@+id/ll_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/eddua">
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="tambah"/>
+
+        <Button
+            android:id="@+id/btn_kali"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:onClick="kali"/>
+
+        <Button
+            android:id="@+id/btn_bagi"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:onClick="bagi"/>
+
+        <Button
+            android:id="@+id/btnkurang"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:onClick="kurang"/>
+
+        <Button
+            android:id="@+id/btnmodul"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:onClick="modulus"/>
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="undo"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_text_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:textSize="30dp"
+        android:layout_below="@+id/ll_operator"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30dp"
+        android:layout_below="@+id/tv_text_hasil"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>
